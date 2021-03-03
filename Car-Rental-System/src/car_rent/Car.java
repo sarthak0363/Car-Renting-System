@@ -11,12 +11,13 @@ public class Car
 	
 	public void show_car()
 	{
-		car_frame = new 
+		car_frame = new JFrame ();
 	}
 	
 	public static void main(String[] args)
 	{
-		
+		Car cr = new Car();
+		cr.show_car();
 	}
 
 	
