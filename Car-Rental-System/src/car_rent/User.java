@@ -41,7 +41,7 @@ public class User
 		 first_page = new JFrame ();
 		 //first_page.setResizable(false);
 		 first_page.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		 first_page.getContentPane().setBackground(Color.WHITE);
+		 first_page.getContentPane().setBackground(Color.CYAN);
 		 first_page.setSize(800, 600);
 		 first_page.getContentPane().setLayout(null);
 		 first_page.setVisible(true);
@@ -52,11 +52,11 @@ public class User
 		 first_page.getContentPane().add(panel);
 		 panel.setLayout(null);
 		 
-		 JLabel c = new JLabel("New label");
-		 c.setBounds(423, 357, 45, 13);
+		 JLabel c = new JLabel("  Car renting system");
+		 c.setBounds(376, 331, 155, 51);
 		 panel.add(c);
 		 
-		 JButton first_login = new JButton("New button");
+		 JButton first_login = new JButton("Login");
 		 first_login.addActionListener(new ActionListener() {
 		 	public void actionPerformed(ActionEvent e) {
 		 	        first_page.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -66,7 +66,7 @@ public class User
 		 first_login.setBounds(313, 456, 85, 21);
 		 first_page.getContentPane().add(first_login);
 		 
-		 JButton first_register = new JButton("New button");
+		 JButton first_register = new JButton("Register");
 		 first_register.addActionListener(new ActionListener() {
 		 	public void actionPerformed(ActionEvent e) {
 		 		first_page.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -189,34 +189,35 @@ public class User
 		panel.setBounds(0, 0, 223, 548);
 		register_frame.getContentPane().add(panel);
 		
-		register_name = new JLabel("New label");
-		register_name.setBounds(263, 45, 45, 13);
+		register_name = new JLabel("Name");
+		register_name.setBounds(263, 45, 85, 43);
 		register_frame.getContentPane().add(register_name);
 		
-		register_phone = new JLabel("New label");
-		register_phone.setBounds(263, 156, 45, 13);
+		register_phone = new JLabel("Phone number");
+		register_phone.setBounds(263, 156, 90, 40);
 		register_frame.getContentPane().add(register_phone);
 		
-	    register_userid = new JLabel("New label");
-		register_userid.setBounds(263, 272, 45, 13);
+	    register_userid = new JLabel("Userid");
+		register_userid.setBounds(263, 272, 103, 42);
 		register_frame.getContentPane().add(register_userid);
 		
-		register_pwd = new JLabel("New label");
-		register_pwd.setBounds(263, 378, 45, 13);
+		register_pwd = new JLabel("Password");
+		register_pwd.setBounds(263, 378, 85, 35);
 		register_frame.getContentPane().add(register_pwd);
 		
-		register_button = new JButton("New button");
-		register_button.setBounds(573, 494, 85, 21);
+		register_button = new JButton("Register");
+		register_button.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		register_button.setBounds(556, 480, 114, 35);
 		register_frame.getContentPane().add(register_button);
 		
-		register_b1 = new JButton("New button");
+		register_b1 = new JButton("Back");
 		register_b1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				        login_frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		                first_page.setVisible(true);
 			}
 		});
-		register_b1.setBounds(724, 494, 85, 21);
+		register_b1.setBounds(724, 480, 103, 35);
 		register_frame.getContentPane().add(register_b1);
 		
 		name_txt = new JTextField();
@@ -240,20 +241,20 @@ public class User
 		register_pwd_txt.setColumns(10);
 		
 		
-		JRadioButton customer_radio = new JRadioButton("New radio button");
-		customer_radio.setBounds(724, 173, 103, 21);
+		JRadioButton customer_radio = new JRadioButton("Customer");
+		customer_radio.setBounds(724, 173, 114, 40);
 		register_frame.getContentPane().add(customer_radio);
 		
-		JRadioButton driver_radio = new JRadioButton("New radio button");
-		driver_radio.setBounds(724, 243, 103, 21);
+		JRadioButton driver_radio = new JRadioButton("Driver");
+		driver_radio.setBounds(724, 243, 114, 43);
 		register_frame.getContentPane().add(driver_radio);
 		
-		JRadioButton manager_radio = new JRadioButton("New radio button");
-		manager_radio.setBounds(724, 311, 103, 21);
+		JRadioButton manager_radio = new JRadioButton("Mnager");
+		manager_radio.setBounds(724, 324, 114, 43);
 		register_frame.getContentPane().add(manager_radio);
 		
-		role_label = new JLabel("New label");
-		role_label.setBounds(724, 124, 66, 13);
+		role_label = new JLabel("Roll");
+		role_label.setBounds(724, 98, 103, 39);
 		register_frame.getContentPane().add(role_label);
 		
 		ButtonGroup group = new ButtonGroup ();
