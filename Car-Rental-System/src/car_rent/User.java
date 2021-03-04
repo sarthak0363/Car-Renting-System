@@ -41,39 +41,44 @@ public class User
 		 first_page = new JFrame ();
 		 //first_page.setResizable(false);
 		 first_page.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		 first_page.getContentPane().setBackground(Color.CYAN);
+		 first_page.getContentPane().setBackground(new Color(255, 255, 255));
 		 first_page.setSize(800, 600);
 		 first_page.getContentPane().setLayout(null);
 		 first_page.setVisible(true);
 		 
 		 JPanel panel = new JPanel();
-		 panel.setBackground(Color.CYAN);
+		 panel.setBackground(new Color(128, 0, 0));
 		 panel.setBounds(0, 0, 968, 404);
 		 first_page.getContentPane().add(panel);
 		 panel.setLayout(null);
 		 
 		 JLabel c = new JLabel("  Car renting system");
-		 c.setBounds(376, 331, 155, 51);
+		 c.setForeground(new Color(255, 255, 255));
+		 c.setBackground(new Color(255, 255, 255));
+		 c.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		 c.setBounds(376, 331, 193, 51);
 		 panel.add(c);
 		 
 		 JButton first_login = new JButton("Login");
+		 first_login.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		 first_login.addActionListener(new ActionListener() {
 		 	public void actionPerformed(ActionEvent e) {
 		 	        first_page.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		 	        login_frame.setVisible(true);
 		 	}
 		 });
-		 first_login.setBounds(313, 456, 85, 21);
+		 first_login.setBounds(313, 456, 139, 34);
 		 first_page.getContentPane().add(first_login);
 		 
 		 JButton first_register = new JButton("Register");
+		 first_register.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		 first_register.addActionListener(new ActionListener() {
 		 	public void actionPerformed(ActionEvent e) {
 		 		first_page.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		 		register_frame.setVisible(true);
 		 		}
 		 });
-		 first_register.setBounds(537, 456, 85, 21);
+		 first_register.setBounds(518, 456, 147, 34);
 		 first_page.getContentPane().add(first_register);
 	 }
 	
@@ -190,18 +195,22 @@ public class User
 		register_frame.getContentPane().add(panel);
 		
 		register_name = new JLabel("Name");
+		register_name.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		register_name.setBounds(263, 45, 85, 43);
 		register_frame.getContentPane().add(register_name);
 		
 		register_phone = new JLabel("Phone number");
-		register_phone.setBounds(263, 156, 90, 40);
+		register_phone.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		register_phone.setBounds(263, 156, 150, 40);
 		register_frame.getContentPane().add(register_phone);
 		
 	    register_userid = new JLabel("Userid");
+	    register_userid.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		register_userid.setBounds(263, 272, 103, 42);
 		register_frame.getContentPane().add(register_userid);
 		
 		register_pwd = new JLabel("Password");
+		register_pwd.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		register_pwd.setBounds(263, 378, 85, 35);
 		register_frame.getContentPane().add(register_pwd);
 		
@@ -211,49 +220,54 @@ public class User
 		register_frame.getContentPane().add(register_button);
 		
 		register_b1 = new JButton("Back");
+		register_b1.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		register_b1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				        login_frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		                first_page.setVisible(true);
 			}
 		});
-		register_b1.setBounds(724, 480, 103, 35);
+		register_b1.setBounds(724, 480, 114, 35);
 		register_frame.getContentPane().add(register_b1);
 		
 		name_txt = new JTextField();
-		name_txt.setBounds(317, 98, 96, 19);
+		name_txt.setBounds(299, 98, 150, 39);
 		register_frame.getContentPane().add(name_txt);
 		name_txt.setColumns(10);
 		
 		phone_txt = new JTextField();
-		phone_txt.setBounds(317, 206, 96, 19);
+		phone_txt.setBounds(299, 206, 150, 40);
 		register_frame.getContentPane().add(phone_txt);
 		phone_txt.setColumns(10);
 		
 		register_userid_txt = new JTextField();
-		register_userid_txt.setBounds(317, 324, 96, 19);
+		register_userid_txt.setBounds(299, 324, 150, 35);
 		register_frame.getContentPane().add(register_userid_txt);
 		register_userid_txt.setColumns(10);
 		
 		register_pwd_txt = new JTextField();
-		register_pwd_txt.setBounds(317, 423, 96, 19);
+		register_pwd_txt.setBounds(299, 423, 150, 35);
 		register_frame.getContentPane().add(register_pwd_txt);
 		register_pwd_txt.setColumns(10);
 		
 		
 		JRadioButton customer_radio = new JRadioButton("Customer");
+		customer_radio.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		customer_radio.setBounds(724, 173, 114, 40);
 		register_frame.getContentPane().add(customer_radio);
 		
 		JRadioButton driver_radio = new JRadioButton("Driver");
+		driver_radio.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		driver_radio.setBounds(724, 243, 114, 43);
 		register_frame.getContentPane().add(driver_radio);
 		
 		JRadioButton manager_radio = new JRadioButton("Mnager");
+		manager_radio.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		manager_radio.setBounds(724, 324, 114, 43);
 		register_frame.getContentPane().add(manager_radio);
 		
 		role_label = new JLabel("Roll");
+		role_label.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		role_label.setBounds(724, 98, 103, 39);
 		register_frame.getContentPane().add(role_label);
 		
